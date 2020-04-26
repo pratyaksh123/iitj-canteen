@@ -11,7 +11,6 @@ import PastOrdersScreen from '../Containers/PastOrdersScreen/PastOrderScreen';
 import ProfileScreen from '../Containers/ProfileScreen/ProfileScreen';
 import QueueScreen from '../Containers/QueueScreen/QueueScreen';
 
-
 const BottomStack = createBottomTabNavigator(
 	{
 		HomeScreen: HomeScreen,
@@ -21,7 +20,7 @@ const BottomStack = createBottomTabNavigator(
 	{
 		initialRouteName: 'HomeScreen'
 	}
-)
+);
 
 const Drawer = createDrawerNavigator(
 	{
@@ -31,16 +30,16 @@ const Drawer = createDrawerNavigator(
 	{
 		initialRouteName: 'HomeScreen'
 	}
-)
+);
 
 const StackNavigator = createStackNavigator(
 	{
 		MainScreen: SplashScreen,
 		SigninScreen: SigninScreen,
-		HomeScreen: BottomStack
+		HomeScreen: Drawer
 	},
 	{
-		initialRouteName: 'MainScreen',
+		initialRouteName: 'HomeScreen',
 		headerMode: 'none'
 	}
 );
