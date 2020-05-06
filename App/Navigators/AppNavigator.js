@@ -1,11 +1,7 @@
 import { createAppContainer } from 'react-navigation';
 
 import { createStackNavigator } from 'react-navigation-stack';
-<<<<<<< HEAD
-import { createBottomTabNavigator } from 'react-navigation-tabs';
-=======
 import { createMaterialBottomTabNavigator } from 'react-navigation-material-bottom-tabs';
->>>>>>> 7a7f3d9e82d112bcb58c394a952b44f58c10a7aa
 import { createDrawerNavigator } from 'react-navigation-drawer';
 
 import HomeScreen from '../Containers/HomeScreen/HomeScreen';
@@ -14,17 +10,8 @@ import SigninScreen from '../Containers/SigninScreen/SigninScreen';
 import PastOrdersScreen from '../Containers/PastOrdersScreen/PastOrderScreen';
 import ProfileScreen from '../Containers/ProfileScreen/ProfileScreen';
 import QueueScreen from '../Containers/QueueScreen/QueueScreen';
+import IntroScreen from '../Containers/IntroScreen/IntroScreen';
 
-<<<<<<< HEAD
-const BottomStack = createBottomTabNavigator(
-	{
-		HomeScreen: HomeScreen,
-		PastOrdersScreen: PastOrdersScreen,
-		QueueScreen: QueueScreen
-	},
-	{
-		initialRouteName: 'HomeScreen'
-=======
 import React from 'react';
 import { View } from 'react-native';
 import MaterialIcon from 'react-native-vector-icons/MaterialIcons';
@@ -75,45 +62,28 @@ const BottomStack = createMaterialBottomTabNavigator(
 			borderTopRightRadius: 20,
 			overflow: 'hidden'
 		}
->>>>>>> 7a7f3d9e82d112bcb58c394a952b44f58c10a7aa
 	}
 );
 
 const Drawer = createDrawerNavigator(
 	{
-<<<<<<< HEAD
-		HomeScreen: BottomStack,
-		ProfileScreen: ProfileScreen
-	},
-	{
-		initialRouteName: 'HomeScreen'
-=======
 		HomeStack: BottomStack,
 		ProfileScreen: ProfileScreen
 	},
 	{
 		initialRouteName: 'HomeStack'
->>>>>>> 7a7f3d9e82d112bcb58c394a952b44f58c10a7aa
 	}
 );
 
 const StackNavigator = createStackNavigator(
 	{
-<<<<<<< HEAD
-		MainScreen: SplashScreen,
-		SigninScreen: SigninScreen,
-		HomeScreen: Drawer
-	},
-	{
-		initialRouteName: 'HomeScreen',
-=======
+		IntroScreen: IntroScreen,
 		SplashScreen: SplashScreen,
 		LoginFlow: SigninScreen,
 		MainFlow: Drawer
 	},
 	{
-		initialRouteName: 'SplashScreen',
->>>>>>> 7a7f3d9e82d112bcb58c394a952b44f58c10a7aa
+		initialRouteName: 'IntroScreen',
 		headerMode: 'none'
 	}
 );
